@@ -1,0 +1,48 @@
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: inherit;
+  margin-top: 2rem;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #626262;
+  width: 100%;
+  color: white;
+}
+
+.footer-resize {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2rem 8rem;
+  width: 100%;
+}
+
+.footer-nav {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+
+.footer-nav a {
+  color: white;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+.footer-nav-icons {
+  margin-top: 0.3rem;
+  margin-left: 1.3rem;
+  margin-right: 1.3rem;
+  font-size: 0.5rem;
+  color: white;
+}
+
+.footer-copyright {
+  width: 8rem;
+  font-size: 1rem;
+}
+
+

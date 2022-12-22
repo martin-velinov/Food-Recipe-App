@@ -1,0 +1,12 @@
+.wrapper{
+    display: flex;
+    text-align: end;
+    margin-top: 4rem;
+}
+
+.wrapper span{
+    border-bottom: 1px solid #D8D8D8;
+    flex-grow: 1;
+    margin-bottom: 0.7rem;
+    margin-left: 1rem;
+}
