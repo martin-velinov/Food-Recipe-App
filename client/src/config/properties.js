@@ -1,6 +1,6 @@
 export const properties= {
     host:{
-        api:"http://localhost:5000"
+        api:"https://foodapp-oii8.onrender.com/"
     }
     
 }
