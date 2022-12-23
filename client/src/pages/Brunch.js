@@ -5,7 +5,7 @@ const Brunch = () => {
   return (
     <>
       <SectionTitle title={'Brunch'} />
-      <RecipeList filterByCategory={'breakfast'} />
+      <RecipeList filterByCategory={'brunch'} />
     </>
   );
 };
