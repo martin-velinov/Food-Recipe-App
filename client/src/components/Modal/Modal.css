@@ -2,23 +2,19 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 85%;
   background: rgba(255, 255, 255, 0.2) 0% 0% no-repeat padding-box;
   backdrop-filter: blur(8px);
   z-index: 10000;
 }
-.backdrop .modal-wrapper {
+ .modal-wrapper {
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
   border-radius: 5px 5px 5px 5px;
-  max-width: 60%;
-  max-height: 80%;
-  margin: 10rem 30rem;
-  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
-  border: 3px solid white;
+  border: 2px solid rgb(186, 180, 180);
   padding: 2rem;
+  margin-left: 3rem;
+  width: 70%;
 }
 
 .modal-icons {
@@ -28,12 +24,13 @@
 
 .modal-body {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  
 }
 
-.modal-body-right {
-  margin-left: 2rem;
-  width: 60%;
+.modal-body-right, .modal-body-left {
+  width: 100%;
+  
 }
 
 .recipe-short-description {
@@ -41,8 +38,6 @@
   font-size: 0.9rem;
   font-weight: 400;
   color: #a5a5a5;
-  word-break: break-word;
-  white-space: normal;
 }
 
 .modal-title {
@@ -55,6 +50,8 @@
 .modal-close-btn {
   background: 0;
   border: 0;
+  margin-left: 50vw;
+
 }
 .modal-close-btn:hover {
   cursor: pointer;
@@ -62,11 +59,7 @@
 
 .modal-title-close-button {
   margin-bottom: 1rem;
-  margin-top: 0.5rem;
-}
 
-.modal-body-left {
-  width: 40%;
 }
 
 .modal-body-left img {
@@ -86,6 +79,8 @@
 
 .recipe-category {
   margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .recipe-category :nth-child(1) {
@@ -104,7 +99,6 @@
   border-radius: 15px;
   text-align: center;
   padding: 5px;
-  /* line-height: 30px; */
   width: 4rem;
 }
 
@@ -121,8 +115,28 @@
   margin-left: 10px;
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (min-width: 1024px) {
   .backdrop .modal-wrapper {
-    margin: 2rem 14rem;
+    margin: 6rem 14rem;
+    max-width: 60%;
+    max-height: 80%;  
+    box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5); 
   }
+
+  .modal-body {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .modal-wrapper{
+    margin-left: 10rem;
+  }
+  
+  .modal-title-close-button {
+    display: flex;
+    justify-content: space-between;
+
+  }
+  
 }

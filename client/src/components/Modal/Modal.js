@@ -17,9 +17,7 @@ const Modal = ({ selectedCard, setSelectedCard }) => {
     <div className='backdrop'>
       <div className='modal-wrapper'>
         <div
-          className='modal-title-close-button'
-          style={{ display: 'flex', justifyContent: 'space-between' }}
-        >
+          className='modal-title-close-button'>
           <span className='modal-title'>{selectedCard.recipeTitle}</span>
           <button className='modal-close-btn' onClick={handleClick}>
             <FontAwesomeIcon icon={faXmark} size='2x' />
@@ -28,17 +26,11 @@ const Modal = ({ selectedCard, setSelectedCard }) => {
         <div className='modal-body'>
           <div className='modal-body-left'>
             <img src={selectedCard.recipeImg} alt='recipe_image' />
-            <div
-              className='recipe-category'
-              style={{ display: 'flex', justifyContent: 'space-between' }}
-            >
+            <div className='recipe-category'>
               <span>Best Served For</span>
               <span>{selectedCard.category}</span>
             </div>
-            <div
-              className='recipe-short-description'
-              style={{ marginTop: '1rem' }}
-            >
+            <div className='recipe-short-description'>
               {selectedCard.shortDesc}
             </div>
             <div className='modal-icons'>

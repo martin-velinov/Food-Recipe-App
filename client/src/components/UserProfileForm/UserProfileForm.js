@@ -7,7 +7,7 @@ import { Controller, useForm } from 'react-hook-form';
 import DatePicker from 'react-datepicker';
 import { logout } from '../../redux/slices/userLogin';
 import 'react-datepicker/dist/react-datepicker.css';
-import styles from './UserProfileForm.module.css';
+import './UserProfileForm.css';
 import { properties} from "../../config/properties";
 
 const UserProfileForm = () => {
@@ -94,13 +94,13 @@ const UserProfileForm = () => {
   };
 
   return (
-    <div className={styles.userProfileWrapper}>
+    <div className='userProfileWrapper'>
       <form
-        className={styles.userProfileForm}
+        className='userProfileForm'
         onSubmit={handleSubmit(handleSubmitData, onError)}
       >
-        <div className={styles.userProfilePicture}>
-          <div className={styles.editImageWrapper}>
+        <div className='userProfilePicture'>
+          <div className='editImageWrapper'>
             <img
               src={
                 img === undefined || img === [] || img.length === 0
@@ -117,56 +117,56 @@ const UserProfileForm = () => {
             multiple
             {...register('file')}
           />
-          <label htmlFor='file' className={styles.imageLabel}>
+          <label htmlFor='file' className='imageLabel'>
             CHANGE AVATAR
           </label>
         </div>
-        <div className={styles.allInputs}>
-          <div className={styles.formDefaultInputContainer}>
-            <label htmlFor='firstName' className={styles.formDefaultLabel}>
+        <div className='allInputs'>
+          <div className='formDefaultInputContainer'>
+            <label htmlFor='firstName' className='formDefaultLabel'>
               First Name
             </label>
             <input
               id='firstName'
               placeholder='John'
               defaultValue={addUserFormData.firstName}
-              className={styles.formDefaultInput}
+              className='formDefaultInput'
               {...register('firstName', {
                 onChange: (e) => handleInputChange(e),
               })}
             />
             {errors.firstName && (
-              <span className={styles.invalidInput}>
+              <span className='invalidInput'>
                 This field is required
               </span>
             )}
           </div>
-          <div className={styles.formDefaultInputContainer}>
-            <label htmlFor='lastName' className={styles.formDefaultLabel}>
+          <div className='formDefaultInputContainer'>
+            <label htmlFor='lastName' className='formDefaultLabel'>
               Last Name
             </label>
             <input
               id='lastName'
               placeholder='Smith'
               defaultValue={addUserFormData.lastName}
-              className={styles.formDefaultInput}
+              className='formDefaultInput'
               {...register('lastName', {
                 onChange: (e) => handleInputChange(e),
               })}
             />
             {errors.lastName && (
-              <span className={styles.invalidInput}>
+              <span className='invalidInput'>
                 This field is required
               </span>
             )}
           </div>
-          <div className={styles.formDefaultInputContainer}>
-            <label htmlFor='email' className={styles.formDefaultLabel}>
+          <div className='formDefaultInputContainer'>
+            <label htmlFor='email' className='formDefaultLabel'>
               Email
             </label>
             <input
               id='email'
-              className={styles.formDefaultInput}
+              className='formDefaultInput'
               placeholder='john@smith.com'
               defaultValue={addUserFormData.email}
               {...register('email', {
@@ -176,11 +176,11 @@ const UserProfileForm = () => {
               })}
             />
             {errors.email?.type === 'pattern' && (
-              <span className={styles.invalidInput}>Enter valid email</span>
+              <span className='invalidInput'>Enter valid email</span>
             )}
           </div>
-          <div className={styles.formDefaultInputContainer}>
-            <label htmlFor='birthday' className={styles.formDefaultLabel}>
+          <div className='formDefaultInputContainer'>
+            <label htmlFor='birthday' className='formDefaultLabel'>
               Birthday
             </label>
 
@@ -191,7 +191,7 @@ const UserProfileForm = () => {
               render={({ field }) => (
                 <DatePicker
                   id='birthday'
-                  className={styles.formDefaultInput}
+                  className='formDefaultInput'
                   dateFormat='dd-MM-yyyy'
                   selected={moment(field.value).toDate()}
                   onChange={(date) => field.onChange(date)}
@@ -201,34 +201,34 @@ const UserProfileForm = () => {
               )}
             />
             {errors.birthday && (
-              <span className={styles.invalidInput}>
+              <span className='invalidInput'>
                 This field is required
               </span>
             )}
           </div>
-          <div className={styles.formDefaultInputContainer}>
-            <label htmlFor='password' className={styles.formDefaultLabel}>
+          <div className='formDefaultInputContainer'>
+            <label htmlFor='password' className='formDefaultLabel'>
               Password
             </label>
             <input
               type='password'
               id='password'
-              className={styles.formDefaultInput}
+              className='formDefaultInput'
               placeholder='******'
               {...register('password', {
                 onChange: (e) => handleInputChange(e),
               })}
             />
           </div>
-          <div className={styles.formDefaultInputContainer}>
-            <label htmlFor='passwordRepeat' className={styles.formDefaultLabel}>
+          <div className='formDefaultInputContainer'>
+            <label htmlFor='passwordRepeat' className='formDefaultLabel'>
               Repeat Password
             </label>
             <input
               type='password'
               id='passwordRepeat'
               placeholder='******'
-              className={styles.formDefaultInput}
+              className='formDefaultInput'
               {...register('passwordRepeat', {
                 onChange: (e) => handleInputChange(e),
                 validate: {
@@ -238,11 +238,11 @@ const UserProfileForm = () => {
               })}
             />
             {errors.passwordRepeat?.type === 'passEqual' && (
-              <span className={styles.invalidInput}>Passwords don't match</span>
+              <span className='invalidInput'>Passwords don't match</span>
             )}
           </div>
         </div>
-        <button type='submit' className={styles.formSubmitBtn}>
+        <button type='submit' className='formSubmitBtn'>
           SAVE
         </button>
       </form>

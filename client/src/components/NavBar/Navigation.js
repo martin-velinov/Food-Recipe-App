@@ -93,17 +93,7 @@ function Navigation() {
           <Link to='/login'>
             <button className='login-button'>LOG IN</button>
           </Link>
-          <div
-            style={{
-              marginLeft: '1rem',
-              marginRight: '1rem',
-              fontSize: '1.1rem',
-              font: 'normal normal 900 16px/21px Roboto',
-              color: '#f0972a',
-            }}
-          >
-            or
-          </div>
+          <div className='or'>or</div>
           <Link to='/register'>
             <button className='register-button'>CREATE ACCOUNT</button>
           </Link>

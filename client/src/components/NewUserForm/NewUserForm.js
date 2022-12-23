@@ -3,7 +3,7 @@ import { useForm, Controller, get } from 'react-hook-form';
 import DatePicker from 'react-datepicker';
 import axios from 'axios';
 import 'react-datepicker/dist/react-datepicker.css';
-import styles from './NewUserForm.module.css';
+import './NewUserForm.css';
 import { properties} from "../../config/properties";
 import {text} from '../../data/index'
 import avatar from '../../assets/img/avatar.png'
@@ -38,37 +38,37 @@ const NewUserForm = () => {
   };
 
   return (
-    <div className={styles.registerWrapper}>
-      <div className={styles.registerTextbox}>
-        <h1 className={styles.textboxHeader}>
+    <div className='registerWrapper'>
+      <div className='registerTextbox'>
+        <h1 className='textboxHeader'>
           Create your <span style={{ color: '#626262' }}>account</span>
         </h1>
-        <p className={styles.textboxParagraph}>
+        <p className='textboxParagraph'>
           {text.createAccount}
         </p>
       </div>
       <form
-        className={styles.registerForm}
+        className='registerForm'
         onSubmit={handleSubmit(handleSubmitData)}
       >
-        <div className={styles.defaultInputWrapper}>
-          <label htmlFor='firstName' className={styles.defaultLabel}>
+        <div className='defaultInputWrapper'>
+          <label htmlFor='firstName' className='defaultLabel'>
             First Name
           </label>
           <input
             id='firstName'
-            className={styles.defaultInput}
+            className='defaultInput'
             placeholder='John'
             {...register('firstName', {
               required: true,
             })}
           />
           {errors.firstName && (
-            <span className={styles.invalidInput}>This field is required</span>
+            <span className='invalidInput'>This field is required</span>
           )}
         </div>
-        <div className={styles.defaultInputWrapper}>
-          <label htmlFor='lastName' className={styles.defaultLabel}>
+        <div className='defaultInputWrapper'>
+          <label htmlFor='lastName' className='defaultLabel'>
             Last Name
           </label>
           <input
@@ -77,15 +77,15 @@ const NewUserForm = () => {
               required: true,
             })}
             placeholder='Smith'
-            className={styles.defaultInput}
+            className='defaultInput'
           />
           {errors.lastName && (
-            <span className={styles.invalidInput}>This field is required</span>
+            <span className='invalidInput'>This field is required</span>
           )}
         </div>
 
-        <div className={styles.defaultInputWrapper}>
-          <label htmlFor='email' className={styles.defaultLabel}>
+        <div className='defaultInputWrapper'>
+          <label htmlFor='email' className='defaultLabel'>
             Email
           </label>
           <input
@@ -95,17 +95,17 @@ const NewUserForm = () => {
               pattern: /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
             })}
             placeholder='john@smith.com'
-            className={styles.defaultInput}
+            className='defaultInput'
           />
           {errors.email && (
-            <span className={styles.invalidInput}>This field is required</span>
+            <span className='invalidInput'>This field is required</span>
           )}
           {errors.email?.type === 'pattern' && (
-            <span className={styles.invalidInput}>Enter valid email</span>
+            <span className='invalidInput'>Enter valid email</span>
           )}
         </div>
-        <div className={styles.defaultInputWrapper}>
-          <label htmlFor='birthday' className={styles.defaultLabel}>
+        <div className='defaultInputWrapper'>
+          <label htmlFor='birthday' className='defaultLabel'>
             Birthday
           </label>
           <Controller
@@ -115,7 +115,7 @@ const NewUserForm = () => {
             render={({ field }) => (
               <DatePicker
                 id='birthday'
-                className={styles.defaultInput}
+                className='defaultInput'
                 placeholderText='22-11-2000'
                 onChange={(date) => field.onChange(date)}
                 selected={field.value}
@@ -125,17 +125,17 @@ const NewUserForm = () => {
             )}
           />
           {errors.birthday && (
-            <span className={styles.invalidInput}>This field is required</span>
+            <span className='invalidInput'>This field is required</span>
           )}
         </div>
-        <div className={styles.defaultInputWrapper}>
-          <label htmlFor='password' className={styles.defaultLabel}>
+        <div className='defaultInputWrapper'>
+          <label htmlFor='password' className='defaultLabel'>
             Password
           </label>
           <input
             type='password'
             id='password'
-            className={styles.defaultInput}
+            className='defaultInput'
             placeholder='******'
             {...register('password', {
               required: true,
@@ -146,22 +146,22 @@ const NewUserForm = () => {
             })}
           />
           {errors.password && (
-            <span className={styles.invalidInput}>This field is required</span>
+            <span className='invalidInput'>This field is required</span>
           )}
           {errors.password?.type === 'minLength' && (
-            <span className={styles.invalidInput}>
+            <span className='invalidInput'>
               Must be longer than 6 characters
             </span>
           )}
         </div>
-        <div className={styles.defaultInputWrapper}>
-          <label htmlFor='confirmPassword' className={styles.defaultLabel}>
+        <div className='defaultInputWrapper'>
+          <label htmlFor='confirmPassword' className='defaultLabel'>
             Repeat Password
           </label>
           <input
             type='password'
             id='confirmPassword'
-            className={styles.defaultInput}
+            className='defaultInput'
             placeholder='******'
             {...register('confirmPassword', {
               required: true,
@@ -172,10 +172,10 @@ const NewUserForm = () => {
             })}
           />
           {errors.confirmPassword?.type === 'passEqual' && (
-            <span className={styles.invalidInput}>Passwords don't match</span>
+            <span className='invalidInput'>Passwords don't match</span>
           )}
         </div>
-        <button type='submit' className={styles.formSubmitBtn}>
+        <button type='submit' className='formSubmitBtn'>
           CREATE ACCOUNT
         </button>
       </form>

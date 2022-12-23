@@ -55,11 +55,9 @@ const NewRecipeForm = ({ requestMethod, currentData }) => {
       className='form-style'
       onSubmit={handleSubmit(handleSubmitData, onError)}
     >
-      <div className='form-wrapper' style={{ display: 'flex', width: '100%' }}>
+      <div className='form-wrapper' >
         <div
-          className='new-recipe-left'
-          style={{ display: 'flex', flexDirection: 'column', width: '20%' }}
-        >
+          className='new-recipe-left'>
           <div className='image-title'>Recipe Image</div>
 
           <div className='image-wrapper'>
@@ -125,7 +123,7 @@ const NewRecipeForm = ({ requestMethod, currentData }) => {
               </select>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <div >
               <InputComp
                 type='number'
                 inputGroupName='prep-time'
@@ -207,7 +205,7 @@ const NewRecipeForm = ({ requestMethod, currentData }) => {
         </div>
       </div>
       <button className='recipe-submit-btn' type='submit'>
-        Create
+        Save
       </button>
     </form>
   );

@@ -27,7 +27,7 @@ const MyRecipes = () => {
       .catch((err) => console.log(err));
   }, []);
   return (
-    <>
+    <div style={{marginTop:'0px'}}>
       <SectionTitle
         title={'My Recipes'}
         button={
@@ -41,7 +41,7 @@ const MyRecipes = () => {
         }
       />
       <RecipeTable tableData={tableData} setTableData={setTableData} />
-    </>
+    </div>
   );
 };
 
