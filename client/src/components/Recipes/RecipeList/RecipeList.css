@@ -1,0 +1,37 @@
+/* .card-list{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+} */
+
+.card-list{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .card-list{
+        display: grid;
+        grid-gap: 50px;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .card-list{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .card-list{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin-top: 1rem;
+    }
+}

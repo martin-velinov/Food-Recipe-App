@@ -6,7 +6,7 @@ import {
   faXmark,
 } from '@fortawesome/free-solid-svg-icons';
 import './Modal.css';
-import LikeComp from '../LikeComp';
+import LikeRecipe from '../Recipes/LikeRecipe/LikeRecipe';
 
 const Modal = ({ selectedCard, setSelectedCard }) => {
   const handleClick = () => {
@@ -42,7 +42,7 @@ const Modal = ({ selectedCard, setSelectedCard }) => {
                 <FontAwesomeIcon icon={faUtensils} color='gray' />{' '}
                 {selectedCard.numberOfPeople} people
               </div>
-              <LikeComp
+              <LikeRecipe
                 recipeLikes={selectedCard.likes}
                 recipeId={selectedCard._id}
                 className='modal-stars'

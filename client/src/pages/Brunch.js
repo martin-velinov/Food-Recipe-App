@@ -1,11 +1,11 @@
-import CardList from '../components/Cards/CardList/CardList';
+import RecipeList from '../components/Recipes/RecipeList/RecipeList';
 import SectionTitle from '../components/Title/SectionTitle';
 
 const Brunch = () => {
   return (
     <>
       <SectionTitle title={'Brunch'} />
-      <CardList filterByCategory={'brunch'} />
+      <RecipeList filterByCategory={'breakfast'} />
     </>
   );
 };

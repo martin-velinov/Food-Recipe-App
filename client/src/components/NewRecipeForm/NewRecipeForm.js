@@ -1,6 +1,6 @@
 import { useForm } from 'react-hook-form';
 import { useParams, useNavigate } from 'react-router-dom';
-import InputComp from '../InputComp';
+import Input from '../Input/Input';
 import './NewRecipeForm.css';
 import { request } from '../../util/request';
 import { properties} from "../../config/properties";
@@ -83,7 +83,7 @@ const NewRecipeForm = ({ requestMethod, currentData }) => {
           </label>
         </div>
         <div className='new-recipe-middle'>
-          <InputComp
+          <Input
             type='text'
             inputGroupName='title-input'
             label='Recipe Title'
@@ -124,7 +124,7 @@ const NewRecipeForm = ({ requestMethod, currentData }) => {
             </div>
 
             <div >
-              <InputComp
+              <Input
                 type='number'
                 inputGroupName='prep-time'
                 label='Preperation Time'
@@ -149,7 +149,7 @@ const NewRecipeForm = ({ requestMethod, currentData }) => {
               {console.log(errors.prepTime)}
             </div>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <InputComp
+              <Input
                 type='number'
                 inputGroupName='people'
                 label='No. People'

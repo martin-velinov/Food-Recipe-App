@@ -235,4 +235,10 @@
   
 }
 
+@media screen and (min-width: 1500px) {
+  .form-wrapper{
+     width: 70%;
+  }
+}
+
 

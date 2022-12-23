@@ -79,3 +79,10 @@
     background-color: #f0972a;
   }
   
+  
+  @media screen and (min-width: 1500px) {
+    .my-recipes{
+      max-width: 60%;
+    }
+  
+  }

@@ -1,5 +1,6 @@
 import SectionTitle from '../components/Title/SectionTitle';
 import UserProfileForm from '../components/UserProfileForm/UserProfileForm';
+
 const UserProfile = () => {
   return (
     <>
