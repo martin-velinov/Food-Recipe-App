@@ -1,6 +1,8 @@
 # Food Recipe App
 
-##Description
+## [LIVE DEMO](https://babys-food.onrender.com/)
+
+## Description
 
 This is a responsive MERN stack application
 In this app users can:
@@ -10,7 +12,7 @@ In this app users can:
 4. Like Recipes
 5. Upload images in recipes
 
-##Usage
+## Usage
 
 1. Clone the repo
 2. cd client npm install && cd server npm install
